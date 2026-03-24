@@ -10,11 +10,11 @@
 
 // export default App
 // @ts-ignore: allow importing JS module without a declaration file
-import PortfolioInProgress from "./Pages/PortfolioInProgress";
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    <PortfolioInProgress />
+    <Home />
   )
 }
 
