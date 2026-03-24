@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation"
 
 export default function PortfolioInProgress() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-950 text-white px-6">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-black via-gray-900 to-gray-950 text-white px-6">
 
       <div className="text-center max-w-2xl">
 

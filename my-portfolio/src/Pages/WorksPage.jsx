@@ -1,18 +1,18 @@
+import { useEffect } from 'react';
 import CustomCursor from '../components/animations/CustomCursor';
 import FloatingOrbNav from '../components/layout/FloatingOrbNav';
-import Hero from '../components/sections/Hero';
-import BentoSkills from '../components/sections/BentoSkills';
 import Works from '../components/sections/Works';
 import Footer from '../components/layout/Footer';
 
-const Home = () => {
+const WorksPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="min-h-screen bg-[#020202] text-white font-sans selection:bg-primary selection:text-black">
+    <div className="min-h-screen bg-[#020202] text-white font-sans selection:bg-primary selection:text-black pt-12 md:pt-24">
       <CustomCursor />
       <FloatingOrbNav />
-      <main>
-        <Hero />
-        <BentoSkills />
+      <main className="min-h-screen mb-24">
         <Works />
       </main>
       <Footer />
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default WorksPage;

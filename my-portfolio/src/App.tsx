@@ -1,20 +1,19 @@
-// import React from "react";
 
-
-// const App = () => {
-//   return (
-
-//     <div className="h-[1400px] text-7xl text-emerald-600">App</div>
-//   )
-// }
-
-// export default App
+import { Routes, Route } from 'react-router-dom';
 // @ts-ignore: allow importing JS module without a declaration file
 import Home from "./Pages/Home";
+// @ts-ignore: allow importing JS module without a declaration file
+import WorksPage from "./Pages/WorksPage";
+// @ts-ignore: allow importing JS module without a declaration file
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
   return (
-    <Home />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/works" element={<WorksPage />} />
+      <Route path="/about" element={<AboutPage />} />
+    </Routes>
   )
 }
 

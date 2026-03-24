@@ -6,7 +6,6 @@ const CustomCursor = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    // Check if the user is on a touch device
     if (window.matchMedia('(pointer: coarse)').matches) {
       return;
     }
@@ -42,24 +41,21 @@ const CustomCursor = () => {
   const cursorX = useSpring(mousePosition.x, springConfig);
   const cursorY = useSpring(mousePosition.y, springConfig);
 
-  // Hide cursor on touch devices by default.
   if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
       return null;
   }
 
   return (
     <div className="hidden lg:block">
-      {/* Small dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-[var(--color-primary)] rounded-full pointer-events-none z-[100] mix-blend-screen shadow-[0_0_10px_rgba(141,255,105,1)]"
+        className="fixed top-0 left-0 w-2 h-2 bg-primary rounded-full pointer-events-none z-100 mix-blend-screen shadow-[0_0_10px_rgba(141,255,105,1)]"
         style={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,
         }}
       />
-      {/* Following ring */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full border border-[var(--color-primary)] pointer-events-none z-[99] flex items-center justify-center transition-all"
+        className="fixed top-0 left-0 rounded-full border border-primary pointer-events-none z-99 flex items-center justify-center transition-all"
         style={{
           x: cursorX,
           y: cursorY,
